@@ -1,0 +1,14 @@
+﻿@model List<Comic>
+
+<h1>Comics SQL y Oracle</h1>
+<a asp-controller="Comics"
+   asp-action="Create">
+     Create New
+</a>
+<ul class="list-group">
+    @foreach(Comic comic in Model){
+        <li class="list-group-item"><img src="@comic.Imagen" style="width:150px;" /></li>
+        <li class="list-group-item">@comic.Nombre</li>
+        <li class="list-group-item">@comic.Descripcion</li>
+    }
+</ul>

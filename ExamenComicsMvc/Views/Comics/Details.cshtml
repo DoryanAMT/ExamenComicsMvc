@@ -1,0 +1,25 @@
+﻿@model Comic
+
+@{
+    List<Comic> comics = ViewData["COMICS"] as List<Comic>;
+}
+
+<h1>Details</h1>
+
+<form method="post">
+    <select name="idcomic" class="form form-control">
+        @foreach(Comic comic in comics){
+            <option value="@comic.IdComic">@comic.Nombre</option>
+        }
+    </select>
+    <button>Filtrar</button>
+</form>
+
+@if(Model != null){
+    <ul>
+        <li>@Model.IdComic</li>
+        <li><img src="@Model.Imagen" style="width:150px;" /></li>
+        <li>@Model.Nombre</li>
+        <li>@Model.Descripcion</li>
+    </ul>
+}
