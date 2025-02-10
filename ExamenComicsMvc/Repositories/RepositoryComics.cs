@@ -10,15 +10,6 @@ using System.Diagnostics.Metrics;
 
 namespace ExamenComicsMvc.Repositories
 {
-    #region
-    //create or alter procedure SP_INSERT_COMIC
-    //(@nombre as nvarchar(50), @imagen as nvarchar(50), @descripcion as nvarchar(50))
-    //as
-    //declare @maxId as int;
-    //select @maxId = max(IDCOMIC) + 1 from COMICS
-    //insert into COMICS values(@maxId, @nombre, @imagen, @descripcion)
-    //go
-    #endregion
     public class RepositoryComics
     {
         DataTable tablaComics;
